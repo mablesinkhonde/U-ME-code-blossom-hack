@@ -10,14 +10,14 @@ let index = 0;
 
   document.getElementById('startBtn').addEventListener('click', () => {
     if (!intervalId) {
-      intervalId = setInterval(showSlide, 3000); // Start sliding every 3 seconds
+      intervalId = setInterval(showSlide, 3000); 
     }
   });
 
 document.getElementById("nailForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Collect form data
+ 
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const style = document.getElementById("style").value;
@@ -26,28 +26,27 @@ document.getElementById("nailForm").addEventListener("submit", function (e) {
 
   const booking = { name, phone, style, date, time };
 
-  // Save booking to local storage
+  
   let bookings = JSON.parse(localStorage.getItem("nailBookings")) || [];
   bookings.push(booking);
   localStorage.setItem("nailBookings", JSON.stringify(bookings));
 
-  // Display confirmation message to the user
+  
   document.getElementById("message").innerText =
     `Thank you, ${name}! Your ${style} nails are booked for ${date} at ${time}.`;
-  
-  // Optionally, you could send an email notification here with EmailJS
 
-  // Now, add the WhatsApp notification code
-  const ownerNumber = "265885519089"; // Replace with your actual WhatsApp number (with country code)
+  
+  const ownerNumber = "265885519089"; 
   const whatsAppMsg = `New Nail Booking: ${name} booked ${style} nails on ${date} at ${time}.`;
   const whatsappLink = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
   
-  // Open WhatsApp in a new tab so the owner can see the message.
+  
   window.open(whatsappLink, '_blank');
 
-  // Reset the form if needed
+  
   document.getElementById("nailForm").reset();
-   // --- Image Slider Handler ---
+
+   
   let index = 0;
   let slides = document.querySelectorAll('.slide');
   let intervalId = null;
