@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nail Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Nail Appointment 💅</h1>
+    <form id="nailForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <select id="style" required>
+        <option value="">Choose Style</option>
+        <option value="French Tips">French Tips</option>
+        <option value="Gel Nails">Gel Nails</option>
+        <option value="Acrylic">Acrylic</option>
+      </select>
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="message"></div>
+    <div class="slider">
+  <img src="WhatsApp Image 2025-06-24 at 10.06.05 AM (1).jpeg" class="slide active">
+  <img src="WhatsApp Image 2025-06-24 at 10.06.05 AM (2).jpeg " class="slide">
+  <!-- <img src="WhatsApp Image 2025-06-24 at 10.06.05 AM.jpeg" class="slide"> -->
+  <img src="WhatsApp Image 2025-06-24 at 10.10.02 AM.jpeg" class="slide">
+
+</div>
+<button id="startBtn">Start Slideshow</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
