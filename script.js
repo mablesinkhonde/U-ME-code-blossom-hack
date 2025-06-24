@@ -38,7 +38,7 @@ document.getElementById("nailForm").addEventListener("submit", function (e) {
   // Optionally, you could send an email notification here with EmailJS
 
   // Now, add the WhatsApp notification code
-  const ownerNumber = "265991625900"; // Replace with your actual WhatsApp number (with country code)
+  const ownerNumber = "265885519089"; // Replace with your actual WhatsApp number (with country code)
   const whatsAppMsg = `New Nail Booking: ${name} booked ${style} nails on ${date} at ${time}.`;
   const whatsappLink = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
   
