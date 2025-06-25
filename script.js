@@ -1,3 +1,19 @@
+let index = 0;
+  let slides = document.querySelectorAll('.slide');
+  let intervalId = null;
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  document.getElementById('startBtn').addEventListener('click', () => {
+    if (!intervalId) {
+      intervalId = setInterval(showSlide, 3000); // Start sliding every 3 seconds
+    }
+  });
+
 document.getElementById("nailForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -22,7 +38,7 @@ document.getElementById("nailForm").addEventListener("submit", function (e) {
   // Optionally, you could send an email notification here with EmailJS
 
   // Now, add the WhatsApp notification code
-  const ownerNumber = "265991625900"; // Replace with your actual WhatsApp number (with country code)
+  const ownerNumber = "265885519089"; // Replace with your actual WhatsApp number (with country code)
   const whatsAppMsg = `New Nail Booking: ${name} booked ${style} nails on ${date} at ${time}.`;
   const whatsappLink = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
   
@@ -31,4 +47,21 @@ document.getElementById("nailForm").addEventListener("submit", function (e) {
 
   // Reset the form if needed
   document.getElementById("nailForm").reset();
+   // --- Image Slider Handler ---
+  let index = 0;
+  let slides = document.querySelectorAll('.slide');
+  let intervalId = null;
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  document.getElementById('startBtn').addEventListener('click', () => {
+    if (!intervalId) {
+      intervalId = setInterval(showSlide, 3000); // Start sliding every 3 seconds
+    }
+  });
 });
+
